@@ -8,6 +8,7 @@ vim.wo.number = true
 
 require("plugins.keymaps")
 require("plugins.colorscheme")
+require("plugins.autocommands")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
