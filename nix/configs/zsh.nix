@@ -35,7 +35,7 @@
       zinit light zsh-users/zsh-autosuggestions
 
       # Load Oh My Posh
-      zinit ice from"gh-r" as"program" atload'eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"'
+      zinit ice from"gh-r" as"program" atload'eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/robbyrussell.omp.json)"'
       zinit light JanDeDobbeleer/oh-my-posh
 
       # Load zoxide
@@ -45,7 +45,7 @@
 
       # Load NVM
       export NVM_DIR="$HOME/.nvm"
-      zinit ice wait lucid
+      zinit ice wait lucid 
       zinit snippet OMZP::nvm
 
       # Load fzf
@@ -70,6 +70,7 @@
       lx = "eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale";
       lS = "eza -1";
       lt = "eza --tree --level=2";
+      hms = "home-manager switch --flake ~/dotfiles/nix#viktoreeej;";
     };
     history = {
       size = 1000;

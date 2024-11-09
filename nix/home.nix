@@ -47,6 +47,7 @@
     
     # Terminal
     alacritty
+    fish
     oh-my-posh
     zellij
     fzf
