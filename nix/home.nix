@@ -44,7 +44,7 @@
     slurp
     
     # Terminal
-    alacritt
+    alacritty
     oh-my-posh
     zellij
     fzf
