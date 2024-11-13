@@ -193,7 +193,10 @@ return {
 
   -- My ows plugins
   -- :3
+ 
+
   -- RandTheme
+  --[[
   { "Styzex/RandTheme.nvim",
     lazy = false,
     priority = 1000,
@@ -206,5 +209,5 @@ return {
       })
     end,
   },
+  ]]
 }
-

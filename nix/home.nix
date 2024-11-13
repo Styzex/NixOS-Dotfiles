@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./configs/zsh.nix
+    ./configs/fish.nix
     ./configs/rust.nix
   ];
 
@@ -22,14 +22,13 @@
     tree
     yazi
     librewolf
+    cliphist
     
     # Rice
     stow
     rofi-wayland
     neofetch
     waybar
-    # Ags
-    ags
     # Swww
     swww
 
@@ -46,8 +45,7 @@
     slurp
     
     # Terminal
-    alacritty
-    fish
+    alacritt
     oh-my-posh
     zellij
     fzf

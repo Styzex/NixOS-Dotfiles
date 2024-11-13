@@ -1,10 +1,10 @@
-import = [ "/home/viktoreeej/dotfiles/.config/alacritty/colorschemes/tokyo-night.toml" ] # or tokyo-night-storm.toml
+import = [ "/home/viktoreeej/dotfiles/.config/alacritty/colorschemes/gruvbox_dark.toml" ] # or tokyo-night.toml
 
 [colors]
 draw_bold_text_with_bright_colors = true
 
 [font]
-size = 15.0
+size = 14.0
 
 [font.bold]
 family = "CaskaydiaCove Nerd Font"
