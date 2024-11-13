@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./configs/fish.nix
     ./configs/rust.nix
   ];
 
