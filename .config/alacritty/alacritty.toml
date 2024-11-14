@@ -1,4 +1,4 @@
-import = [ "/home/viktoreeej/dotfiles/.config/alacritty/colorschemes/gruvbox_dark.toml" ] # or tokyo-night.toml
+import = [ "/home/viktoreeej/dotfiles/.config/alacritty/colorschemes/sequoia_moonlight.toml" ]
 
 [colors]
 draw_bold_text_with_bright_colors = true

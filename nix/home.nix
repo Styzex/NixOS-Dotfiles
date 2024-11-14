@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./configs/zsh.nix
     ./configs/rust.nix
   ];
 
@@ -28,7 +29,7 @@
     rofi-wayland
     neofetch
     waybar
-    # Swww
+    nwg-bar
     swww
 
     # Dependencies
