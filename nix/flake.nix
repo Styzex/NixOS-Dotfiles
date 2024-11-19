@@ -20,21 +20,22 @@
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs pkgs; };
         modules = [
           ./configuration.nix
           ./hardware-configuration.nix
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs pkgs; };
-            home-manager.users.viktoreeej = import ./home.nix;
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.viktoreeej = import ./home.nix;
+            };
           }
         ];
       };
+
       homeConfigurations.viktoreeej = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        pkgs = pkgs;
         modules = [ 
           ./home.nix
           {
@@ -44,7 +45,6 @@
             };
           }
         ];
-        extraSpecialArgs = { inherit inputs; };
       };
     };
 }

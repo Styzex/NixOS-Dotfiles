@@ -70,7 +70,10 @@
       lx = "eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale";
       lS = "eza -1";
       lt = "eza --tree --level=2";
-      hms = "home-manager switch --flake ~/dotfiles/nix#viktoreeej;";
+
+      # Nix
+      hms = "home-manager switch --flake ~/dotfiles/nix#viktoreeej";
+      nrs = "sudo nixos-rebuild switch --flake ~/dotfiles/nix/.#nixos";
     };
     history = {
       size = 1000;

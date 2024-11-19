@@ -3,6 +3,7 @@
 {
   imports = [ 
     ./hardware-configuration.nix
+    <home-manager/nixos>
     # Remove this line to avoid redundancy
     # inputs.home-manager.nixosModules.home-manager
   ];
@@ -45,8 +46,6 @@
   hardware.pulseaudio.enable = false;
   hardware.opengl = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
   };
 
   security.rtkit.enable = true;
@@ -56,21 +55,12 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
+  
   users.users.viktoreeej = {
     isNormalUser = true;
     description = "Viktoreeej";
     extraGroups = [ "networkmanager" "wheel" ];
   };
-
-  # Remove home-manager block from here, as it's already in flake.nix
-  # home-manager = {
-  #   useGlobalPkgs = true;
-  #   useUserPackages = true;
-  #   extraSpecialArgs = { inherit inputs pkgs-unstable; };
-  #   users.viktoreeej = import ./home.nix;
-  #   backupFileExtension = "backup";  # Add this line
-  # };
 
   # Set zsh as the default shell for all users
   users.defaultUserShell = pkgs.zsh;
@@ -108,6 +98,15 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+  };
+
+  environment.pathsToLink = [
+    "/share/home-manager"
+  ];
 
   programs.gamemode.enable = true;
   programs.steam.enable = true;
