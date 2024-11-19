@@ -3,7 +3,12 @@
   "position": "bottom",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["battery", "clock", "tray", "wlogout"],
+  "modules-right": ["battery", "clock", "hyprland/language", "pulseaudio","tray"],
+
+  // -------------------------------------------------------------------------
+  // Modules
+  // -------------------------------------------------------------------------
+
   "hyprland/window": {
     "max-length": 50
   },
@@ -29,6 +34,24 @@
     "format": "{capacity}% {icon}",
     "format-icons": ["", "", "", "", ""]
   },
+  "hyprland/language": {
+    "format": " {short} {variant}",
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  },
+  "pulseaudio": {
+    "format": "{volume}%",
+    "format-bluetooth": "{volume}%",
+    "format-muted": "",
+    "format-icons": {
+        "default": ["", ""]
+    },
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"],
+  },
   "clock": {
     "format-alt": "{:%a, %d. %b  %H:%M}"
   },
@@ -36,5 +59,10 @@
     "format": "{icons}",
     "icon-size": 20,
     "spacing": 4
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false
   }
 }

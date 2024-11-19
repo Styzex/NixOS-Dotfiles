@@ -23,6 +23,7 @@
     yazi
     librewolf
     cliphist
+    pavucontrol
     
     # Rice
     stow
@@ -68,6 +69,14 @@
     bun
     go
 
+    # Gaming
+    mangohud
+    bottles
+    protonup
+    heroic
+    steamcontroller
+    prismlauncher
+
     # Passwords
     _1password
     _1password-gui
@@ -76,6 +85,10 @@
   programs.home-manager.enable = true;
 
   programs.firefox.enable = true;
+ 
+  home.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatibilitytools.d";
+  };
 
   home.stateVersion = "24.05";
 }

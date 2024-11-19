@@ -43,6 +43,12 @@
   services.printing.enable = true;
 
   hardware.pulseaudio.enable = false;
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -93,20 +99,14 @@
     vulkan-validation-layers
   ];
 
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-
   environment.variables = {
     LD_LIBRARY_PATH = [
-      "${pkgs.libGL}/lib"
+      "${pkgs.libGL}/lib" 
       "${pkgs.libGLU}/lib"
       "${pkgs.SDL2}/lib"
     ];
   };
-
+ 
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
     modesetting.enable = true;
@@ -116,6 +116,10 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
+
+  programs.gamemode.enable = true;
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
 
   system.stateVersion = "24.05";
 }
