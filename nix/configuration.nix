@@ -99,14 +99,6 @@
     vulkan-validation-layers
   ];
 
-  environment.variables = {
-    LD_LIBRARY_PATH = [
-      "${pkgs.libGL}/lib" 
-      "${pkgs.libGLU}/lib"
-      "${pkgs.SDL2}/lib"
-    ];
-  };
- 
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
     modesetting.enable = true;
