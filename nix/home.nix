@@ -21,7 +21,6 @@
     btop
     tree
     yazi
-    librewolf
     cliphist
     pavucontrol
     
